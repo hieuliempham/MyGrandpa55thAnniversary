@@ -1,0 +1,578 @@
+
+/* @import url("https://fonts.googleapis.com/css?family=Arvo|Cookie|Josefin+Sans|Lora|Roboto+Slab:300|Sanchez|Teko:500"); */
+@import url("https://fonts.googleapis.com/css?family=Arvo&subset=vietnamese|Cookie&subset=vietnamese|Josefin+Sans&subset=vietnamese|Lora&subset=vietnamese|Roboto+Slab:300&subset=vietnamese|Sanchez&subset=vietnamese|Teko:500&subset=vietnamese");
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #6c4f6d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6c4f6d;
+  height: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+
+p {
+  -webkit-user-select: all !important;
+  /* Chrome all / Safari all */
+  -moz-user-select: all !important;
+  /* Firefox all */
+  -ms-user-select: all !important;
+  /* IE 10+ */
+  user-select: all !important;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.homeOpened {
+  overflow: hidden;
+}
+body.homeOpened .menuToggle {
+  display: none;
+}
+body.homeOpened .toTop {
+  display: none;
+}
+
+.breaker {
+  background-image: url("https://images.unsplash.com/photo-1487530811176-3780de880c2d");
+  background-size: cover;
+  float: left;
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+}
+
+hr {
+  width: 70%;
+  float: left;
+  margin: 10px 15% 10px 15%;
+  background: #ccc;
+  border: 0px;
+  height: 1px;
+}
+
+.toTop {
+  text-align: center;
+  background: #5f7872;
+  float: left;
+  padding: 10px 15px 5px 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12pt;
+  font-family: "Teko", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  display: block;
+  z-index: 1000;
+}
+.toTop:hover {
+  opacity: 0.9;
+}
+
+.menuToggle {
+  float: left;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 100000000000000000;
+  left: 0;
+  text-align: right;
+  padding: 0px;
+  top: 0px;
+  background: #fff;
+  font-size: 30pt;
+  margin: 0px;
+  padding: 5px;
+  cursor: pointer;
+}
+.menuToggle i {
+  float: right;
+  margin: 10px 10px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+.menuToggle i:hover {
+  color: #5f7872;
+}
+.menuToggle i:nth-child(2) {
+  display: none;
+}
+.menuToggle i:nth-child(1) {
+  display: block;
+}
+.menuToggle.opened i:nth-child(1) {
+  display: none;
+}
+.menuToggle.opened i:nth-child(2) {
+  display: block;
+}
+
+nav {
+  width: 100%;
+  float: left;
+  background: #fff;
+  height: 100%;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 75px;
+  top: -100%;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+nav.opened {
+  top: 0px;
+}
+nav a {
+  color: #6c4f6d;
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-family: "Arvo", serif;
+  font-size: 15pt;
+  margin: 20px 0px 0px 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.width50 {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.width25 {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+
+.homepage {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  float: left;
+  background: #fff;
+  height: 100%;
+  z-index: 10000;
+}
+.homepage.homeOpened {
+  pointer-events: none !important;
+  background: rgba(0, 0, 0, 0);
+}
+.homepage.homeOpened .leftHalf {
+  transform: translate(-120%, 0);
+  -webkit-transform: translate(-120%, 0);
+}
+.homepage.homeOpened .rightHalf {
+  transform: translate(120%, 0);
+  -webkit-transform: translate(120%, 0);
+}
+
+.leftHalf, .rightHalf {
+  width: 50%;
+  float: left;
+  height: 100%;
+  padding: 25px;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.leftHalf {
+  background-image: url("https://images.unsplash.com/photo-1487530811176-3780de880c2d");
+  background-size: cover;
+}
+.leftHalf .weddingLogo {
+  width: 80%;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+}
+
+.rightHalf {
+  background: #fff;
+}
+.rightHalf .contentHalfWrap {
+  float: left;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  left: 0;
+  margin-left: 0px;
+}
+.rightHalf h1 {
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  font-size: 12pt;
+  float: left;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  color: #1a1a1a;
+  margin: 10px 0px 0px 0px;
+}
+.rightHalf h1.big {
+  font-size: 30pt;
+}
+.rightHalf h1.big span {
+  font-size: 35pt;
+  position: relative;
+  top: -7px;
+}
+.rightHalf h2 {
+  font-family: "Arvo", serif;
+  font-weight: 100;
+  font-size: 14pt;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+  transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.rightHalf h2 a {
+  color: #b7a8af;
+  text-decoration: none;
+}
+.rightHalf h2:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.rightHalf .countDownWrapper {
+  width: 100%;
+  float: left;
+}
+.rightHalf .dateInfo {
+  font-family: "Teko", sans-serif;
+  width: 100%;
+  float: left;
+  font-size: 14pt;
+  margin-bottom: 0px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  font-weight: 100;
+  color: #1a1a1a;
+}
+.rightHalf #countdownTimer {
+  width: 100%;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.rightHalf #countdownTimer .timeHolder {
+  width: 25%;
+  float: left;
+}
+.rightHalf #countdownTimer .timeHolder p {
+  font-size: 17pt;
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-family: "Arvo", serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #222;
+}
+.rightHalf #countdownTimer .timeHolder h2 {
+  font-size: 10pt;
+  float: left;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-family: "Arvo", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #222;
+}
+/* .rightHalf .buttons {
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+}
+.rightHalf .buttons a {
+  font-family: "Teko", sans-serif;
+  color: #fff;
+  background: #5f7872;
+  float: left;
+  text-align: center;
+  font-size: 14pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2px 10px 0px 10px;
+  width: 31.33%;
+  margin: 5px 1% 5px 1%;
+  pointer: cursor;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+} */
+
+.rightHalf .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.rightHalf .buttons a {
+  font-family: "Teko", sans-serif;
+  color: #fff;
+  background: #5f7872;
+  text-align: center;
+  font-size: 14pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2px 10px 0px 10px;
+  width: 31.33%;
+  margin: 5px 1%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rightHalf .buttons a:first-child {
+  margin-left: 0;
+}
+
+.rightHalf .buttons a:last-child {
+  margin-right: 0;
+}
+
+.rightHalf .buttons a i {
+  font-size: 11pt;
+}
+.rightHalf .buttons a.nulled {
+  pointer-events: none;
+  background: #d4d3cf;
+}
+.rightHalf .buttons a:hover {
+  background: #b7a8af;
+}
+.rightHalf .buttons p {
+  font-family: "Arvo", serif;
+  font-size: 12pt;
+  width: 100%;
+  text-align: center;
+  float: left;
+}
+
+.mainPageWrapper {
+  min-height: 100%;
+  height: 100%;
+  float: left;
+  width: 100%;
+  position: relative;
+  background: #fff;
+}
+.mainPageWrapper h1 {
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  font-size: 15pt;
+  float: left;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  color: #1a1a1a;
+  margin: 50px 0px 0px 0px;
+  font-size: 55pt;
+}
+.mainPageWrapper h1 span {
+  font-size: 35pt;
+  position: relative;
+  top: -7px;
+}
+.mainPageWrapper .section {
+  width: 100%;
+  float: left;
+  padding: 20px 5px 20px 5px;
+}
+.mainPageWrapper .section .contentArea {
+  width: 880px;
+  position: relative;
+  float: left;
+  left: 50%;
+  margin-left: -440px;
+  padding: 10px 20px 10px 20px;
+}
+.mainPageWrapper .section .contentArea h2 {
+  font-family: "Teko", sans-serif;
+  float: left;
+  font-size: 25pt;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #6c4f6d;
+}
+.mainPageWrapper .section .contentArea h3 {
+  font-family: "Teko", sans-serif;
+  float: left;
+  font-size: 18pt;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #6c4f6d;
+}
+.mainPageWrapper .section .contentArea h3 span {
+  color: #5f7872;
+}
+.mainPageWrapper .section .contentArea p {
+  font-family: "Arvo", serif;
+  line-height: 24pt;
+  float: left;
+  margin: 5px 0px 5px 0px;
+  font-size: 12pt;
+  width: 100%;
+  color: #1a1a1a;
+}
+.mainPageWrapper .section .contentArea p a {
+  text-decoration: none;
+  color: #5f7872;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+.mainPageWrapper .section .contentArea p a:hover {
+  color: #b7a8af;
+}
+.mainPageWrapper .section .contentArea .profileHolder {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+.mainPageWrapper .section .contentArea .profileHolder img {
+  width: 100%;
+  float: left;
+}
+.mainPageWrapper .section .contentArea .halfImage {
+  width: 100%;
+  float: left;
+}
+.mainPageWrapper .section .contentArea .halfImage img {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.mainPageWrapper .section .contentArea .halfImage .info {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.mainPageWrapper .section .contentArea .accordian {
+  width: 100%;
+  float: left;
+}
+.mainPageWrapper .section .contentArea .accordian .expandable {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+.mainPageWrapper .section .contentArea .accordian .trigger {
+  font-weight: 900;
+  cursor: pointer;
+}
+.mainPageWrapper .section .contentArea .accordian .trigger i:hover {
+  color: #5f7872;
+}
+.mainPageWrapper .section .contentArea .accordian .trigger i:nth-child(1) {
+  display: inline;
+}
+.mainPageWrapper .section .contentArea .accordian .trigger i:nth-child(2) {
+  display: none;
+}
+.mainPageWrapper .section .contentArea .accordian.opened .trigger i:nth-child(1) {
+  display: none;
+}
+.mainPageWrapper .section .contentArea .accordian.opened .trigger i:nth-child(2) {
+  display: inline;
+}
+.mainPageWrapper .section .contentArea .accordian.opened .expandable {
+  max-height: 1000px;
+  height: auto;
+  overflow: visible;
+}
+
+footer {
+  width: 100%;
+  background: #b7a8af;
+  color: #fff;
+  padding: 10px;
+  float: left;
+  text-align: center;
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  font-size: 12pt;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1080px) {
+  .contentHalfWrap {
+    float: left;
+    width: 500px !important;
+    max-width: 500px;
+    position: relative;
+    left: 50% !important;
+    margin-left: -250px !important;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .buttons a {
+    width: 48% !important;
+  }
+}
+@media screen and (max-width: 880px) {
+  .contentArea {
+    width: 100% !important;
+    left: 0% !important;
+    margin-left: 0px !important;
+  }
+
+  .halfImage img, .halfImage .info {
+    width: 100% !important;
+  }
+
+  .width50 {
+    width: 100% !important;
+  }
+
+  .breaker {
+    height: 150px !important;
+  }
+}
